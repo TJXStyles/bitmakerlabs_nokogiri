@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'QuicksandLight';
+    src: url('../fonts/Quicksand_Light-webfont.eot');
+    src: url('../fonts/Quicksand_Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Quicksand_Light-webfont.woff') format('woff'),
+         url('../fonts/Quicksand_Light-webfont.ttf') format('truetype'),
+         url('../fonts/Quicksand_Light-webfont.svg#QuicksandLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+font-family: 'AlfaSlabOneRegular';
+    src: url('../fonts/AlfaSlabOne-Regular-OTF-webfont.eot');
+    src: url('../fonts/AlfaSlabOne-Regular-OTF-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/AlfaSlabOne-Regular-OTF-webfont.woff') format('woff'),
+         url('../fonts/AlfaSlabOne-Regular-OTF-webfont.ttf') format('truetype'),
+         url('../fonts/AlfaSlabOne-Regular-OTF-webfont.svg#AlfaSlabOneRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	margin:0;
+	font-family: Helvetica, Tahoma, sans-serif
+}
+
+h1 {
+	font-family: AlfaSlabOneRegular;
+}
+
+.section {
+	height: 100%;
+	width:100%;
+	background-color: #c5c5c5;
+	margin: 0;
+	position: relative;
+}
+
+.float {
+	float: left;
+	height:50%;
+	width: 100%;
+	margin-bottom:-140px;
+}
+
+.container {
+	background-color: #000;
+	border-radius: 25px;
+	clear: both;
+	height: 280px;
+	margin: 0 auto;
+	position: relative;
+	width:1200px;
+	z-index:2;
+}
+
+.bg-opacity {
+	background-color: rgba(256,256,256,0.5);
+	height:100%;
+	position:fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+.youtube {
+	display:inline-block;
+	margin-right:25px;
+}
+
+.song-container {
+	background-color: #e5e5e5;
+	display:inline-block;
+	line-height: 0.6;
+	position:relative;
+	top: -40px;
+}
+
+.number {
+	background-color: #00ff00;
+	color:#fff;
+	display:inline-block;
+	width: 200px;
+	
+}
+
+
+
+#section1 {
+	background-image: url('../images/macklemore.png');
+}
+
+#section2 {
+	background-color: #de5265;
+}
+
+#section3 {
+	background-color: #e26778;
+}
+
+
+
+.number {
+	
+}
+
+.song {
+	
+}
+
+.next-song a {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	font-size: 100px;
+	color: black;
+	text-decoration: none;
+	font-family: QuicksandLight;
+	z-index:2;
+
+}

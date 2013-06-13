@@ -22,14 +22,13 @@ artist_names.each { |artists| f.write("#{artists.text}\n") }
 
 end
 
-File.open('chart_positions.txt', 'w') do |f|
 
-page = Nokogiri::HTML(open(PAGE_URL))
+# page = Nokogiri::HTML(open(PAGE_URL))
 
-chart_positions = page.css("div.listing.chart_listing span.chart_position")
-chart_positions.each { |positions| f.write("#{positions.text}\n") }
-end
+# album_name = page.css("p.chart_info")
+# # album_name.each { |album| f.write("#{album.text[\s*<br>\s*(\w+)\s*]}") }
 
+# puts album_name[/\s*<br>\s*(\w+)\s*/]
 
 
 
