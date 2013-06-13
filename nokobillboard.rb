@@ -2,39 +2,48 @@ require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
 
-# BILLBOARD = "http://www.billboard.com/charts/hot-100"
+BILLBOARD = "http://www.billboard.com/charts/hot-100"
 
-# song_names = []
-# artist_names = []
+song_names = []
+artist_names = []
 
-# page = Nokogiri::HTML(open(BILLBOARD))
-# original_song_names = page.css("div.listing.chart_listing h1")
-# original_song_names.each { |songs| song_names << songs.text }
+page = Nokogiri::HTML(open(BILLBOARD))
+original_song_names = page.css("div.listing.chart_listing h1")
+original_song_names.each { |songs| song_names << songs.text }
 
-# page = Nokogiri::HTML(open(BILLBOARD))
-# original_artist_names = page.css("div.listing.chart_listing p.chart_info a")
-# original_artist_names.each { |artists| artist_names << artists.text }
-
-
+page = Nokogiri::HTML(open(BILLBOARD))
+original_artist_names = page.css("div.listing.chart_listing p.chart_info a")
+original_artist_names.each { |artists| artist_names << artists.text }
 
 
 
+	song_names.each_with_index do |song, index|
 
-	song = "Can't hold us"
+		song = song.gsub(" ", "%20")
+		artist = artist_names[index].gsub(" ", "%20")
+		
+
+		search_page = Nokogiri::HTML(open("http://www.songlyrics.com/index.php?section=search&searchW=#{song}+#{artist}&submit=Search"))
+
+		# Grabs the link of the first search result
+		lyric_results = search_page.css(".serpresult h3 a")[0]['href']
+		lyrics_url = Nokogiri::HTML(open(lyric_results))
+		lyrics = lyrics_url.css("div#songLyricsDiv-outer p").text
 
 
-	song.gsub!(" ", "%20")
+	end
+
+
+	
+
+
+	
 
 
 
-	search_page = Nokogiri::HTML(open("http://www.songlyrics.com/index.php?section=search&searchW=#{song}+Macklemore&submit=Search"))
+	
 
-	# Grabs the link of the first search result
-	lyric_results = search_page.css(".serpresult h3 a")[0]['href']
-	lyrics_url = Nokogiri::HTML(open(lyric_results))
-	lyrics = lyrics_url.css("div#songLyricsDiv-outer p").text
-
-	puts lyrics
+	
 
 
 
