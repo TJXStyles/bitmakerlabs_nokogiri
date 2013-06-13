@@ -8,6 +8,19 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'QuicksandLightOblique';
+    src: url('../fonts/Quicksand_Light_Oblique-webfont.eot');
+    src: url('../fonts/Quicksand_Light_Oblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Quicksand_Light_Oblique-webfont.woff') format('woff'),
+         url('../fonts/Quicksand_Light_Oblique-webfont.ttf') format('truetype'),
+         url('../fonts/Quicksand_Light_Oblique-webfont.svg#QuicksandLightOblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 @font-face {
 font-family: 'AlfaSlabOneRegular';
     src: url('../fonts/AlfaSlabOne-Regular-OTF-webfont.eot');
@@ -28,6 +41,12 @@ h1 {
 	font-family: AlfaSlabOneRegular;
 }
 
+h2.artist {
+	font-family: QuicksandLightOblique;
+	font-size: 1em;
+	text-align: right;
+}
+
 .section {
 	height: 100%;
 	width:100%;
@@ -38,19 +57,21 @@ h1 {
 
 .float {
 	float: left;
-	height:50%;
+	height:50px;
 	width: 100%;
-	margin-bottom:-140px;
+	margin-bottom:0px;
 }
 
 .container {
 	background-color: #000;
-	border-radius: 25px;
+	border-top-right-radius: 25px;
+	border-left: 15px solid #fff;
 	clear: both;
 	height: 280px;
 	margin: 0 auto;
+	margin-top:30px;
 	position: relative;
-	width:1200px;
+	width:800px;
 	z-index:2;
 }
 
@@ -62,26 +83,30 @@ h1 {
 	z-index: 1;
 }
 
+.number {
+	color: white;
+	font-family: AlfaSlabOneRegular;
+	font-size: 11em;
+	text-align: center;
+	margin-bottom: 90px;	
+	padding-top: 50px;	
+}
+
 .youtube {
 	display:inline-block;
 	margin-right:25px;
 }
 
 .song-container {
-	background-color: #e5e5e5;
+/*	background-color: #e5e5e5;*/
 	display:inline-block;
-	line-height: 0.6;
+	line-height: 0.5em;
 	position:relative;
-	top: -40px;
+	color: #fff;
+	top: -30px;
 }
 
-.number {
-	background-color: #00ff00;
-	color:#fff;
-	display:inline-block;
-	width: 200px;
-	
-}
+
 
 
 
