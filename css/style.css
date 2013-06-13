@@ -32,6 +32,30 @@ font-family: 'AlfaSlabOneRegular';
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'QuicksandBold';
+    src: url('../fonts/Quicksand_Bold-webfont.eot');
+    src: url('../fonts/Quicksand_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Quicksand_Bold-webfont.woff') format('woff'),
+         url('../fonts/Quicksand_Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Quicksand_Bold-webfont.svg#QuicksandBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'QuicksandBook';
+    src: url('../fonts/Quicksand_Book-webfont.eot');
+    src: url('../fonts/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Quicksand_Book-webfont.woff') format('woff'),
+         url('../fonts/Quicksand_Book-webfont.ttf') format('truetype'),
+         url('../fonts/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
 	margin:0;
 	font-family: Helvetica, Tahoma, sans-serif
@@ -41,11 +65,7 @@ h1 {
 	font-family: AlfaSlabOneRegular;
 }
 
-h2.artist {
-	font-family: QuicksandLightOblique;
-	font-size: 1em;
-	text-align: right;
-}
+
 
 .section {
 	height: 100%;
@@ -70,7 +90,7 @@ h2.artist {
 	margin: 0 auto;
 	margin-top:30px;
 	position: relative;
-	width:800px;
+	width:850px;
 	z-index:2;
 }
 
@@ -83,36 +103,68 @@ h2.artist {
 }
 
 .number {
+	display: inline-block;
+	padding-right:30px;
+	padding-top: 25px;
+	padding-left: 20px;
+	width:287px;
+}
+
+.number p {
 	color: white;
 	font-family: AlfaSlabOneRegular;
-	font-size: 11em;
-	text-align: center;
-	margin-bottom: 90px;	
-	padding-top: 50px;	
+	font-size: 8em;
+	line-height: 1em;
+	margin: 0;		
+	text-align:right;
 }
 
 .youtube {
 	border-left: 15px solid #fff;
-	display:inline-block;
-	margin-right:25px;
+	float:left;
 }
 
 .song-container {
-/*	background-color: #e5e5e5;*/
-	display:inline-block;
-	line-height: 0.5em;
-	position:relative;
-	color: #fff;
-	top: -30px;
+	color: white;
+	display: inline-block;
+	height:127px;
+	padding-right: 30px;
+	padding-left: 20px;
+	width:287px;
+}
+
+.song-container h1 {
+	font-size: 1.3em;
+	line-height: 1.3em;
+	margin-bottom: 0;
+	text-align: right;
+}
+
+h2.artist {
+	font-family: QuicksandLightOblique;
+	font-size: 1em;
+	text-align: right;
+	margin-top: 8px;
 }
 
 .lyrics {
-
+	margin-top: 40px;
 	color: white;
-	line-height: 2em;
-	margin-top: -16px;
-	padding: 40px;
+	padding: 0 40px 40px 40px;
 
+}
+
+.lyrics p {
+	font-family: QuicksandLight;
+	line-height: 1.8em;
+	padding-right: 10px;
+}
+
+.lyrics h3 {
+	border-bottom: 2px white solid;
+	font-family: QuicksandBook;
+	font-size: 1em;
+	height:20px;
 }
 
 
