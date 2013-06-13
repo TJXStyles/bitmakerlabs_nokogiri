@@ -26,18 +26,19 @@ File.open('chart_positions.html', 'w') do |html|
 		html.write("\t\t<div class='youtube'>\n")
 		html.write("\t\t\t<iframe width='498' height='280' src='http://www.youtube.com/embed/fF_sD_poO2Y' frameborder='0' allowfullscreen></iframe>\n")
 		html.write("\t\t</div>\n")
-		html.write("\t\t<div class='number'><p>#{i}</p></div>\n")
+		html.write("\t\t<div class='number'><p>\##{i}</p></div>\n")
 		html.write("\t\t<div class='song-container'>\n")
 		html.write("\t\t\t<p>\n")
-		html.write("\t\t\t\t<h1>#{song_names[i]}</h1>\n")
-		html.write("\t\t\t\t<h2 class='artist'>#{artist_names[i]}</h2>\n")
+		html.write("\t\t\t\t<h1>#{song_names[i-1]}</h1>\n")
+		html.write("\t\t\t\t<h2 class='artist'>#{artist_names[i-1]}</h2>\n")
 		html.write("\t\t\t</p>\n")		
-		html.write("\t\t</div>\n\n")
+		html.write("\t\t</div>\n")
+		html.write("\t</div>\n\n")
 
 
 		if i < song_names.length
 			html.write("\t\t<div class='next-song'>\n")
-			html.write("\t\t\t<a href='#section#{i+1}'>Next song</a>\n")
+			html.write("\t\t\t<a href='\#section#{i+1}'>Next song</a>\n")
 			html.write("\t\t</div>\n")
 			html.write("</div> <!-- Ending section div -->")
 		end
