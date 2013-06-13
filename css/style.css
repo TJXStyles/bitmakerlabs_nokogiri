@@ -65,9 +65,8 @@ h2.artist {
 .container {
 	background-color: #000;
 	border-top-right-radius: 25px;
-	border-left: 15px solid #fff;
+	border-bottom-left-radius: 25px;
 	clear: both;
-	height: 280px;
 	margin: 0 auto;
 	margin-top:30px;
 	position: relative;
@@ -93,6 +92,7 @@ h2.artist {
 }
 
 .youtube {
+	border-left: 15px solid #fff;
 	display:inline-block;
 	margin-right:25px;
 }
@@ -104,6 +104,15 @@ h2.artist {
 	position:relative;
 	color: #fff;
 	top: -30px;
+}
+
+.lyrics {
+
+	color: white;
+	line-height: 2em;
+	margin-top: -16px;
+	padding: 40px;
+
 }
 
 
@@ -124,13 +133,9 @@ h2.artist {
 
 
 
-.number {
-	
-}
 
-.song {
-	
-}
+
+
 
 .next-song a {
 	position: absolute;
