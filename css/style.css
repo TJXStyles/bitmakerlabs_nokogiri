@@ -58,7 +58,7 @@ font-family: 'AlfaSlabOneRegular';
 
 body {
 	margin:0;
-	font-family: Helvetica, Tahoma, sans-serif
+	font-family: Helvetica, Tahoma, sans-serif;
 }
 
 h1 {
@@ -68,39 +68,46 @@ h1 {
 
 
 .section {
-	height: 100%;
-	width:100%;
+	background-image: url('../images/equalizer.jpg');
+	background-attachment: fixed; 
 	background-color: #c5c5c5;
 	margin: 0;
+	padding-top: 50px;
 	position: relative;
+	width: 100%;
 }
 
-.float {
+/*.float {
 	float: left;
 	height:50px;
 	width: 100%;
 	margin-bottom:0px;
-}
+}*/
 
 .container {
-	background-color: #000;
+	background-color: rgba(0,0,0,0.8);
 	border-top-right-radius: 25px;
 	border-bottom-left-radius: 25px;
 	clear: both;
 	margin: 0 auto;
-	margin-top:30px;
+	margin-bottom: 50px;
 	position: relative;
 	width:850px;
 	z-index:2;
+
 }
 
-.bg-opacity {
+.container:last-child {
+	margin-bottom: 0;
+}
+
+/*.bg-opacity {
 	background-color: rgba(256,256,256,0.5);
 	height:100%;
 	position:fixed;
 	width: 100%;
 	z-index: 1;
-}
+}*/
 
 .number {
 	display: inline-block;
@@ -159,6 +166,7 @@ h2.artist {
 	font-family: QuicksandLight;
 	line-height: 1.8em;
 	padding-right: 10px;
+	font-size: 0.8em;
 }
 
 .lyrics h3 {
@@ -167,25 +175,6 @@ h2.artist {
 	font-size: 1em;
 	height:20px;
 }
-
-
-
-
-
-#section1 {
-	background-image: url('../images/macklemore.png');
-}
-
-#section2 {
-	background-color: #de5265;
-}
-
-#section3 {
-	background-color: #e26778;
-}
-
-
-
 
 
 

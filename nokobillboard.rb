@@ -51,7 +51,7 @@ class Billboard_top_10
 
 		@song_names.each_with_index do |song, index|
 			youtube_search = @artist_names[index] + "+" + song
-			youtube_search.gsub!(" ", "+")
+			youtube_search.gsub!(" ", "+").gsub!("&", "%26")
 			youtube = Nokogiri::HTML(open("http://www.youtube.com/results?search_query=#{youtube_search}"))
 			
 			video_id = youtube.css("ol#search-results h3.yt-lockup2-title a")[0]['href']
@@ -60,6 +60,7 @@ class Billboard_top_10
 			@youtube_array << video_id
 
 			puts "Serving up your video of #{song} by #{@artist_names[index]}!!!"
+			
 			
 		end
  
@@ -71,34 +72,32 @@ class Billboard_top_10
 		
 
 			for i in 1..@song_names.length
-				html.write("<div class='section' id='section#{i}'>\n")
-				html.write("\t<div class='bg-opacity'></div>\n")
-				html.write("\t<div class='float'></div>\n")
+
 				html.write("\t<div class='container'>\n")
 				html.write("\t\t<div class='youtube'>\n")
 				html.write("\t\t\t<iframe width='498' height='280' src='http://www.youtube.com/embed/#{@youtube_array[i-1]}' frameborder='0' allowfullscreen></iframe>\n")
 				html.write("\t\t</div>\n")
 				html.write("\t\t<div class='number'><p>\##{i}</p></div>\n")
 				html.write("\t\t<div class='song-container'>\n")
-				html.write("\t\t\t<p>\n")
+				# html.write("\t\t\t<p>\n")
 				html.write("\t\t\t\t<h1>#{@song_names[i-1]}</h1>\n")
 				html.write("\t\t\t\t<h2 class='artist'>#{@artist_names[i-1]}</h2>\n")
-				html.write("\t\t\t</p>\n")		
+				# html.write("\t\t\t</p>\n")		
 				html.write("\t\t</div>\n")
 				html.write("\t\t<div class='lyrics'>\n")
 				html.write("\t\t\t<h3>Lyrics</h3>\n")
 				html.write("#{@lyrics_array[i-1]}")
-				html.write("\t\t</div>\n")
-				html.write("\t</div>\n\n")
+				html.write("\t\t</div>")
+				html.write("\t</div>")
 				
 
 
-					if i < @song_names.length
-					html.write("\t\t<div class='next-song'>\n")
-					html.write("\t\t\t<a href='\#section#{i+1}'>Next song</a>\n")
-					html.write("\t\t</div>\n")
-					html.write("</div> <!-- Ending section div -->")
-					end
+					# if i < @song_names.length
+					# # html.write("\t\t<div class='next-song'>\n")
+					# # html.write("\t\t\t<a href='\#section#{i+1}'>Next song</a>\n")
+					# # html.write("\t\t</div>\n")
+					# # html.write("</div> <!-- Ending section div -->")
+					# end
 			end
 		end
 
