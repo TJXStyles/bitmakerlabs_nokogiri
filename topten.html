@@ -1,17 +1,15 @@
 <html>
     <head>
         <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.10), see www.w3.org">
-
         <title>
             Billboard Top 10
         </title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
         <meta charset="utf-8">
     </head>
     <body>
-        <div class='section'>
-
-        		<div class='container'>
+        			<div class='container'>
 		<div class='youtube'>
 			<iframe width='498' height='280' src='http://www.youtube.com/embed/yyDUC1LUXSU' frameborder='0' allowfullscreen></iframe>
 		</div>
@@ -21,8 +19,9 @@
 				<h2 class='artist'>Robin Thicke Featuring T.I. + Pharrell</h2>
 		</div>
 		<div class='lyrics'>
-			<h3>Lyrics</h3>
-<p id="songLyricsDiv" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;" class="songLyricsV14">[Featuring T.I. &amp; Pharrell
+			<h3 id='lyrics_button1'>Lyrics</h3>
+			<p id='lyrics1'>
+				[Featuring T.I. &amp; Pharrell
 <br>
 <br>
 (Everybody get up) [x2]
@@ -263,7 +262,17 @@
 <br>
  (Hey hey hey)
 <br>
- (Hey hey hey)<br></p>		</div>	</div>	<div class='container'>
+ (Hey hey hey)<br></p>			</p>
+		</div>		<script>
+			$('#lyrics_button1').click(function() {
+				if ($('#lyrics1').is(':hidden')) {
+					$('#lyrics1').slideDown('slow');
+				} else {
+					$('#lyrics1').slideUp();
+				};
+			});
+		</script>
+	</div>	<div class='container'>
 		<div class='youtube'>
 			<iframe width='498' height='280' src='http://www.youtube.com/embed/2zNSgSzhBfM' frameborder='0' allowfullscreen></iframe>
 		</div>
@@ -273,8 +282,9 @@
 				<h2 class='artist'>Macklemore & Ryan Lewis Featuring Ray Dalton</h2>
 		</div>
 		<div class='lyrics'>
-			<h3>Lyrics</h3>
-<p id="songLyricsDiv" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;" class="songLyricsV14">[Verse 1: Macklemore]
+			<h3 id='lyrics_button2'>Lyrics</h3>
+			<p id='lyrics2'>
+				[Verse 1: Macklemore]
 <br>
 Return of the Mack - get up
 <br>
@@ -395,7 +405,17 @@ And all my people say'
 "Na na NAna na naNA na"
 <br>
 <br>
-[Hook x2 Ray Dalton]<br></p>		</div>	</div>	<div class='container'>
+[Hook x2 Ray Dalton]<br></p>			</p>
+		</div>		<script>
+			$('#lyrics_button2').click(function() {
+				if ($('#lyrics2').is(':hidden')) {
+					$('#lyrics2').slideDown('slow');
+				} else {
+					$('#lyrics2').slideUp();
+				};
+			});
+		</script>
+	</div>	<div class='container'>
 		<div class='youtube'>
 			<iframe width='498' height='280' src='http://www.youtube.com/embed/5NV6Rdv1a3I' frameborder='0' allowfullscreen></iframe>
 		</div>
@@ -405,8 +425,9 @@ And all my people say'
 				<h2 class='artist'>Daft Punk Featuring Pharrell Williams</h2>
 		</div>
 		<div class='lyrics'>
-			<h3>Lyrics</h3>
-<p id="songLyricsDiv" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;" class="songLyricsV14">[Verse 1: Pharrell]
+			<h3 id='lyrics_button3'>Lyrics</h3>
+			<p id='lyrics3'>
+				[Verse 1: Pharrell]
 <br>
 Like the legend of the phoenix
 <br>
@@ -478,7 +499,17 @@ We’re up all night to get lucky (x8)
 <br>
 [Outro x4]
 <br>
-We're up all night to get lucky<br></p>		</div>	</div>	<div class='container'>
+We're up all night to get lucky<br></p>			</p>
+		</div>		<script>
+			$('#lyrics_button3').click(function() {
+				if ($('#lyrics3').is(':hidden')) {
+					$('#lyrics3').slideDown('slow');
+				} else {
+					$('#lyrics3').slideUp();
+				};
+			});
+		</script>
+	</div>	<div class='container'>
 		<div class='youtube'>
 			<iframe width='498' height='280' src='http://www.youtube.com/embed/uuZE_IRwLNI' frameborder='0' allowfullscreen></iframe>
 		</div>
@@ -488,8 +519,9 @@ We're up all night to get lucky<br></p>		</div>	</div>	<div class='container'>
 				<h2 class='artist'>Justin Timberlake</h2>
 		</div>
 		<div class='lyrics'>
-			<h3>Lyrics</h3>
-<p id="songLyricsDiv" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;" class="songLyricsV14">[Verse 1]
+			<h3 id='lyrics_button4'>Lyrics</h3>
+			<p id='lyrics4'>
+				[Verse 1]
 <br>
 Aren't you somethin' to admire
 <br>
@@ -631,7 +663,17 @@ You're my reflection and all I see is you
 My reflection, in everything I do
 <br>
 <br>
-[Hook 2]<br></p>		</div>	</div>	<div class='container'>
+[Hook 2]<br></p>			</p>
+		</div>		<script>
+			$('#lyrics_button4').click(function() {
+				if ($('#lyrics4').is(':hidden')) {
+					$('#lyrics4').slideDown('slow');
+				} else {
+					$('#lyrics4').slideUp();
+				};
+			});
+		</script>
+	</div>	<div class='container'>
 		<div class='youtube'>
 			<iframe width='498' height='280' src='http://www.youtube.com/embed/bmZ9xRO7M9M' frameborder='0' allowfullscreen></iframe>
 		</div>
@@ -641,8 +683,9 @@ My reflection, in everything I do
 				<h2 class='artist'>Florida Georgia Line Featuring Nelly</h2>
 		</div>
 		<div class='lyrics'>
-			<h3>Lyrics</h3>
-<p id="songLyricsDiv" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;" class="songLyricsV14">(feat. Nelly)
+			<h3 id='lyrics_button5'>Lyrics</h3>
+			<p id='lyrics5'>
+				(feat. Nelly)
 <br>
 <br>
 <br>
@@ -774,7 +817,17 @@ I got my windows down, and the radio up, get your radio up
 <br>
 I got my windows down, and the radio up, get your radio up
 <br>
-I got my windows down, and the radio up, get your radio up <br></p>		</div>	</div>	<div class='container'>
+I got my windows down, and the radio up, get your radio up <br></p>			</p>
+		</div>		<script>
+			$('#lyrics_button5').click(function() {
+				if ($('#lyrics5').is(':hidden')) {
+					$('#lyrics5').slideDown('slow');
+				} else {
+					$('#lyrics5').slideUp();
+				};
+			});
+		</script>
+	</div>	<div class='container'>
 		<div class='youtube'>
 			<iframe width='498' height='280' src='http://www.youtube.com/embed/ktvTqknDobU' frameborder='0' allowfullscreen></iframe>
 		</div>
@@ -784,8 +837,9 @@ I got my windows down, and the radio up, get your radio up <br></p>		</div>	</di
 				<h2 class='artist'>Imagine Dragons</h2>
 		</div>
 		<div class='lyrics'>
-			<h3>Lyrics</h3>
-<p id="songLyricsDiv" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;" class="songLyricsV14">I'm waking up to ash and dust
+			<h3 id='lyrics_button6'>Lyrics</h3>
+			<p id='lyrics6'>
+				I'm waking up to ash and dust
 <br>
 I wipe my brow and I sweat my rust
 <br>
@@ -855,7 +909,17 @@ Welcome to the new age, to the new age
 Whoa, whoa, I'm radioactive, radioactive
 <br>
 Whoa, whoa, I'm radioactive, radioactive
-<br><br></p>		</div>	</div>	<div class='container'>
+<br><br></p>			</p>
+		</div>		<script>
+			$('#lyrics_button6').click(function() {
+				if ($('#lyrics6').is(':hidden')) {
+					$('#lyrics6').slideDown('slow');
+				} else {
+					$('#lyrics6').slideUp();
+				};
+			});
+		</script>
+	</div>	<div class='container'>
 		<div class='youtube'>
 			<iframe width='498' height='280' src='http://www.youtube.com/embed/OpQFFLBMEPI' frameborder='0' allowfullscreen></iframe>
 		</div>
@@ -865,8 +929,9 @@ Whoa, whoa, I'm radioactive, radioactive
 				<h2 class='artist'>P!nk Featuring Nate Ruess</h2>
 		</div>
 		<div class='lyrics'>
-			<h3>Lyrics</h3>
-<p id="songLyricsDiv" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;" class="songLyricsV14">If dis one of my hoes, two-way me<br><br>
+			<h3 id='lyrics_button7'>Lyrics</h3>
+			<p id='lyrics7'>
+				If dis one of my hoes, two-way me<br><br>
 Ay, ay, Snoop whattup? This your nigga Dre<br>
 Ay man, I was thinkin', I ain't said shit on<br>
 Your whole motherfuckin' album<br>
@@ -940,7 +1005,17 @@ Now she sick, she better lay low<br><br>
 For the niggaz who be claimin' my hood<br>
 And really ain't from my gang, better lay low<br>
 I hope he don't be thinkin', I'm just talkin'<br>
-And I won't do a thing, really hope so<br></p>		</div>	</div>	<div class='container'>
+And I won't do a thing, really hope so<br></p>			</p>
+		</div>		<script>
+			$('#lyrics_button7').click(function() {
+				if ($('#lyrics7').is(':hidden')) {
+					$('#lyrics7').slideDown('slow');
+				} else {
+					$('#lyrics7').slideUp();
+				};
+			});
+		</script>
+	</div>	<div class='container'>
 		<div class='youtube'>
 			<iframe width='498' height='280' src='http://www.youtube.com/embed/n-D1EB74Ckg' frameborder='0' allowfullscreen></iframe>
 		</div>
@@ -950,8 +1025,9 @@ And I won't do a thing, really hope so<br></p>		</div>	</div>	<div class='contai
 				<h2 class='artist'>Selena Gomez</h2>
 		</div>
 		<div class='lyrics'>
-			<h3>Lyrics</h3>
-<p id="songLyricsDiv" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;" class="songLyricsV14">Prince<br>
+			<h3 id='lyrics_button8'>Lyrics</h3>
+			<p id='lyrics8'>
+				Prince<br>
 Come<br>
 Come<br>
 If U're 18 and over, come here 
@@ -1202,7 +1278,17 @@ Come
 <br>
 U should do that, baby 
 <br>
-Come<br></p>		</div>	</div>	<div class='container'>
+Come<br></p>			</p>
+		</div>		<script>
+			$('#lyrics_button8').click(function() {
+				if ($('#lyrics8').is(':hidden')) {
+					$('#lyrics8').slideDown('slow');
+				} else {
+					$('#lyrics8').slideUp();
+				};
+			});
+		</script>
+	</div>	<div class='container'>
 		<div class='youtube'>
 			<iframe width='498' height='280' src='http://www.youtube.com/embed/_sV0S8qWSy0' frameborder='0' allowfullscreen></iframe>
 		</div>
@@ -1212,8 +1298,9 @@ Come<br></p>		</div>	</div>	<div class='container'>
 				<h2 class='artist'>Ariana Grande Featuring Mac Miller</h2>
 		</div>
 		<div class='lyrics'>
-			<h3>Lyrics</h3>
-<p id="songLyricsDiv" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;" class="songLyricsV14">[Featuring: Mac Miller]
+			<h3 id='lyrics_button9'>Lyrics</h3>
+			<p id='lyrics9'>
+				[Featuring: Mac Miller]
 <br>
 <br>
 What we gotta do right here is go back, back to the top.
@@ -1391,7 +1478,17 @@ I love the way you make me feel
 <br>
 I love it
 <br>
-The way I love you. <br></p>		</div>	</div>	<div class='container'>
+The way I love you. <br></p>			</p>
+		</div>		<script>
+			$('#lyrics_button9').click(function() {
+				if ($('#lyrics9').is(':hidden')) {
+					$('#lyrics9').slideDown('slow');
+				} else {
+					$('#lyrics9').slideUp();
+				};
+			});
+		</script>
+	</div>	<div class='container'>
 		<div class='youtube'>
 			<iframe width='498' height='280' src='http://www.youtube.com/embed/UxxajLWwzqY' frameborder='0' allowfullscreen></iframe>
 		</div>
@@ -1401,8 +1498,9 @@ The way I love you. <br></p>		</div>	</div>	<div class='container'>
 				<h2 class='artist'>Icona Pop Featuring Charli XCX</h2>
 		</div>
 		<div class='lyrics'>
-			<h3>Lyrics</h3>
-<p id="songLyricsDiv" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;" class="songLyricsV14">i got this feeling on a summer day when you were gone
+			<h3 id='lyrics_button10'>Lyrics</h3>
+			<p id='lyrics10'>
+				i got this feeling on a summer day when you were gone
 <br>
 i crashed my car into the bridge
 <br>
@@ -1508,7 +1606,16 @@ i don't care
 <br>
 i love it
 <br>
-<br><br></p>		</div>	</div>
-        </div>
+<br><br></p>			</p>
+		</div>		<script>
+			$('#lyrics_button10').click(function() {
+				if ($('#lyrics10').is(':hidden')) {
+					$('#lyrics10').slideDown('slow');
+				} else {
+					$('#lyrics10').slideUp();
+				};
+			});
+		</script>
+	</div>
     </body>
 </html>

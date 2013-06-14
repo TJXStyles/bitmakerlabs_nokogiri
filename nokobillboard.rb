@@ -42,6 +42,8 @@ class Billboard_top_10
 			lyric_results = search_page.css(".serpresult h3 a")[0]['href']
 			lyrics_url = Nokogiri::HTML(open(lyric_results))
 			lyrics = lyrics_url.css("div#songLyricsDiv-outer p")
+			lyrics = lyrics.to_s
+			lyrics.slice!(/<p id="songLyricsDiv" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;" class="songLyricsV14">/)
 			puts "Just retrieved #{@artist_names[index]} - #{@song_names[index]} lyrics..."
 			@lyrics_array << lyrics
 		end
@@ -85,10 +87,22 @@ class Billboard_top_10
 				# html.write("\t\t\t</p>\n")		
 				html.write("\t\t</div>\n")
 				html.write("\t\t<div class='lyrics'>\n")
-				html.write("\t\t\t<h3>Lyrics</h3>\n")
-				html.write("#{@lyrics_array[i-1]}")
+				html.write("\t\t\t<h3 id='lyrics_button#{i}'>Lyrics</h3>\n")
+				html.write("\t\t\t<p id='lyrics#{i}'>\n")
+				html.write("\t\t\t\t#{@lyrics_array[i-1]}")
+				html.write("\t\t\t</p>\n")
 				html.write("\t\t</div>")
+				html.write("\t\t<script>\n")
+				html.write("\t\t\t$('\#lyrics_button#{i}').click(function() {\n")
+				html.write("\t\t\t\tif ($('\#lyrics#{i}').is(':hidden')) {\n")
+				html.write("\t\t\t\t\t$('\#lyrics#{i}').slideDown('slow');\n")
+				html.write("\t\t\t\t} else {\n")
+				html.write("\t\t\t\t\t$('\#lyrics#{i}').slideUp();\n")
+				html.write("\t\t\t\t};\n")
+				html.write("\t\t\t});\n")
+				html.write("\t\t</script>\n")
 				html.write("\t</div>")
+
 				
 
 
